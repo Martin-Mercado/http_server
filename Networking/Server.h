@@ -24,11 +24,11 @@ struct Server
 	int socket;
 
 	//puntero a una funcion launch, no devuelve nada ni lleva argumentos
-	void (*launch)(void); 
+	void (*launch)(struct Server *server); 
 };
 
 //constructor de Server (prototipado)
-struct Server server_constructor(int domain, int service, int protocol, unsigned long interface, int port, int backlog, void (*launch)(void));
+struct Server server_constructor(int domain, int service, int protocol, unsigned long interface, int port, int backlog, void (*launch)(struct Server *server));
 
 #endif /* Server_h */
 
