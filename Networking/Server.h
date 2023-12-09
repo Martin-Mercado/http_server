@@ -21,6 +21,8 @@ struct Server
 
 	struct sockaddr_in address;
 
+	int socket;
+
 	//puntero a una funcion launch, no devuelve nada ni lleva argumentos
 	void (*launch)(void); 
 };

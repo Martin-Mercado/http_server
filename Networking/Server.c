@@ -21,6 +21,8 @@ struct Server server_constructor(int domain, int service, int protocol, unsigned
     server.address.sin_addr.s_addr = htonl(interface);
     //htonl, mismo que htons pero para long
 
+    server.socket = socket(domain, service, protocol);
+
     return server;
 }
 
