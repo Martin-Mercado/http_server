@@ -11,7 +11,7 @@ void launch(struct Server *server)
     // Definir el buffer
     char buffer[30000];
 
-    char *hello = "HTTP/1.1 200 OK\nGMT\nServer: Apache/2.2.14 (Win32)\nLast-Modified: Wed, 22,Jul 2009 19:15:56 GMT\nContent-Type: text/html\nConnection: Closed\n\n<html><body><h1>Hello, World!</h1></body></html>";
+    char *hello = "HTTP/1.1 200 OK\nGMT\nServer: Apache/2.2.14 (Win32)\nLast-Modified: Wed, 22,Jul 2009 19:15:56 GMT\nContent-Type: text/html\nConnection: Closed\n\n<html><body><h1>Working</h1></body></html>";
 
     int address_len = sizeof(server->address);
     int new_socket;
@@ -39,7 +39,7 @@ int main()
 {
     printf("Entered Main\n");
 
-    // puertos debajo de 1024 precisan de permisos elevados
+    // puertos debajo de 1024 precisan de permisos elevados (socket 80 for http)
     struct Server server = server_constructor(AF_INET, SOCK_STREAM, 0, INADDR_ANY, 80,10, launch);
 
     printf("Saliendo de constructor\n");
