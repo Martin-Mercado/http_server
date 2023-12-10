@@ -2,6 +2,7 @@
 #include <string.h>
 #include "Server.h"
 #include <unistd.h>
+#include "Server.c"
 
 //definir funcion de inicializacion
 void launch(struct Server *server)

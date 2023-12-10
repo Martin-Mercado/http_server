@@ -6,6 +6,7 @@
 
 //contiene definiciones para protocolos
 #include <netinet/in.h>
+
 #include <newlib/sys/types.h>
 
 struct Server
