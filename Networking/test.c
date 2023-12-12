@@ -11,7 +11,7 @@ void launch(struct Server *server)
     // Definir el buffer
     char buffer[30000];
 
-    char *hello = "HTTP/1.1 200 OK\nGMT\nServer: Apache/2.2.14 (Win32)\nLast-Modified: Wed, 22,Jul 2009 19:15:56 GMT\nContent-Type: text/html\nConnection: Closed\n\n<html><body><h1>Working</h1></body></html>";
+    char *hello = "HTTP/1.1 200 OK\nGMT\nServer: Apache/2.2.14 l\nContent-Type: text/html\nConnection: Closed\n\n<html><body><h1>Working</h1></body></html>";
 
     int address_len = sizeof(server->address);
     int new_socket;
